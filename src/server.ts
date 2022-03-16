@@ -1,6 +1,7 @@
 import express, { Application, Response } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import { errorResponse404 } from './utils/errorResponses';
 import apiRoutes from './routes/api';
 import config from '../config/config';
 import log from '../config/logging';
@@ -19,12 +20,8 @@ app.use('/api/v1', apiRoutes);
 
 /** Error Handling */
 app.use((_, res: Response) => {
-  const error = new Error('Route not found');
-
-  return res.status(404).json({
-    message: error.message
-  });
-})
+  return res.status(404).json(errorResponse404);
+});
 
 /** Server */
 const PORT = config.PORT as number;
