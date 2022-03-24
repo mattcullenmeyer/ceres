@@ -1,5 +1,5 @@
 import { MockCases } from 'routes/api';
-import { error400 } from './../../utils/errorResponses';
+import { error400 } from '../../utils/errorResponses';
 
 export const postLoginMockCases = (username: string, email: string): MockCases => {
   const defaultResponse = {

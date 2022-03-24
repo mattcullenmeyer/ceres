@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express';
 import log from '../../config/logging';
 // Mock cases
-import { postLoginMockCases } from './login';
-import { getUserDetailMockCases } from './userDetail/index';
+import { postLoginMockCases } from './mocks/login';
+import { getUserDetailMockCases } from './mocks/userDetail';
 
 const router = express.Router();
 
