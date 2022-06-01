@@ -15,4 +15,4 @@ dotenv.config({ path });
 export default {
   PORT: Number(process.env.PORT),
   HOST: process.env.HOST,
-}
+};
